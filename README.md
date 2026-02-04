@@ -69,6 +69,8 @@ Recommended reading order:
 
 - [Thinking Through How Pretraining vs RL Learn](https://www.dwarkesh.com/p/bits-per-sample) - Dwarkesh Patel. Analysis of how pretraining and reinforcement learning differ in their learning dynamics, with implications for RLVR progress.
 
+- [Energy Use of AI Inference: Efficiency Pathways and Test-Time Compute](https://arxiv.org/abs/2509.20241) - arXiv. Analysis of per-query energy use in AI inference as scaling reaches billions of queries, providing estimates for capacity planning, emissions accounting, and efficiency prioritization.
+
 #### Tier 3
 
 - [Hyperparameters are all you need: Using five-step inference for an optimal diffusion schedule](https://zenodo.org/records/17180452) - Zenodo. Analysis of truncation error in diffusion ODE/SDE solvers and optimal inference scheduling with minimal hyperparameter tuning.
@@ -173,6 +175,18 @@ Recommended reading order:
 
 - [SuffixDecoding: Extreme Speculative Decoding for Emerging AI Applications](https://suffix-decoding.github.io/) - NeurIPS 2025 Spotlight. Achieves up to 5.3x speedup in LLM inference for agentic applications using efficient suffix trees for training-free, CPU-based speculative drafting.
 
+- [LMCache: Supercharge Your LLM with the Fastest KV Cache Layer](https://github.com/LMCache/LMCache) - LMCache. Open-source KV cache management library for accelerating LLM serving with cross-query and cross-engine cache reuse.
+
+- [ArcticInference: vLLM Plugin for High-Throughput, Low-Latency Inference](https://github.com/snowflakedb/ArcticInference) - Snowflake. vLLM plugin optimized for high-throughput and low-latency inference workloads.
+
+- [vLLM Production Stack: LLM Inference for Enterprises (Part 1)](https://cloudthrill.ca/vllm-production-stack-llm-inference-for-enterprises-p1) - CloudDude, Cloudthrill. Overview of the community-maintained vLLM production stack with Python-native router, LMCache-powered KV-cache network, autoscaling hooks, and Grafana dashboards.
+
+- [vLLM Semantic Router: Improving Efficiency in AI Reasoning](https://developers.redhat.com/articles/2025/09/11/vllm-semantic-router-improving-efficiency-ai-reasoning) - Red Hat Developer. Open-source system for intelligent, cost-aware request routing that ensures every generated token adds value.
+
+- [How to Make vLLM 13x Faster with LMCache + NVIDIA Dynamo](https://www.youtube.com/watch?v=iuoOpOQkURo) - Faradawn Yang. Hands-on tutorial demonstrating 13x vLLM performance improvement using LMCache and NVIDIA Dynamo.
+
+- [Disaggregated Serving in TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/blogs/tech_blog/blog5_Disaggregated_Serving_in_TensorRT-LLM.md) - NVIDIA. Technical deep-dive into disaggregated serving architecture in TensorRT-LLM, separating prefill and decode stages.
+
 #### Tier 3
 
 - [llm-d Architecture](https://llm-d.ai/docs/architecture) - llm-d. Overview of the llm-d distributed inference architecture, covering component design and system topology for large-scale LLM serving.
@@ -217,6 +231,8 @@ Recommended reading order:
 
 - [REFORM: A New Approach for Reasoning AI to Handle Ultra-Long Inputs](https://www.youtube.com/watch?v=pfLHtbT6cO4) - AER Labs. Video on REFORM, a method enabling reasoning AI models to process extremely long input sequences efficiently.
 
+- [How to Reduce KV Cache Bottlenecks with NVIDIA Dynamo](https://developer.nvidia.com/blog/how-to-reduce-kv-cache-bottlenecks-with-nvidia-dynamo/) - Amr Elmeleegy, NVIDIA. Techniques for reducing KV cache bottlenecks in LLM inference using NVIDIA Dynamo's intelligent caching and routing.
+
 #### Tier 3
 
 - [End-to-End Test-Time Training (TTT-E2E)](https://x.com/i/status/2009187297137446959) - Stanford, NVIDIA, UC Berkeley, Astera Institute. Method for compressing long contexts into weights, eliminating KV cache dependency for continuously learning LLMs.
@@ -230,6 +246,8 @@ Recommended reading order:
 - [Optimizing Long-Context Prefill on Multiple Older-Generation GPU Nodes](https://moreh.io/blog/optimizing-long-context-prefill-on-multiple-older-generation-gpu-nodes-251226/) - Moreh. Techniques for efficient long-context prefill computation distributed across older GPU hardware.
 
 - [Cross-GPU KV Cache Marketplace](https://github.com/neelsomani/kv-marketplace) - Neel Somani. Cross-GPU KV cache marketplace enabling efficient KV cache sharing and trading across GPU devices.
+
+- [Analog In-Memory Computing Attention Mechanism for Fast and Energy-Efficient Inference](https://www.nature.com/articles/s43588-025-00854-1) - Nature Computational Science. Leveraging in-memory computing with emerging gain-cell devices to accelerate the attention mechanism in large language models.
 
 ## 4. Quantization & Model Compression
 
@@ -403,6 +421,8 @@ Recommended reading order:
 
 - [Power Up FSDP2 as a Flexible Training Backend for Miles](https://lmsys.org/blog/2025-12-03-miles-fsdp/) - LMSYS Org. Adding FSDP to Miles as a more flexible training backend for large-scale model training.
 
+- [Shift Parallelism: Low-Latency, High-Throughput LLM Inference](https://arxiv.org/abs/2509.16495) - arXiv. Novel parallelism strategy combining benefits of tensor parallelism (low latency) and data parallelism (high throughput) for efficient LLM inference.
+
 #### Tier 3
 
 - [How To Scale Your Model](https://jax-ml.github.io/scaling-book/) - JAX Team. Comprehensive book covering TPU/GPU architecture, inter-device communication, and parallelism strategies for training and inference at scale.
@@ -444,6 +464,10 @@ Recommended reading order:
 - [GRPO Fine-Tuning for Ministral3-VL](https://colab.research.google.com/github/huggingface/trl/blob/main/examples/notebooks/grpo_ministral3_vl.ipynb) - HuggingFace TRL. Colab notebook demonstrating Group Relative Policy Optimization fine-tuning for Ministral3 vision-language model.
 
 - [SFT Fine-Tuning for Ministral3-VL](https://colab.research.google.com/github/huggingface/trl/blob/main/examples/notebooks/sft_ministral3_vl.ipynb) - HuggingFace TRL. Colab notebook for supervised fine-tuning of Ministral3 vision-language model.
+
+- [LoRA Without Regret](https://thinkingmachines.ai/blog/lora/) - Thinking Machines Lab. Analysis showing LoRA matches full training performance more broadly than expected.
+
+- [Agentic RL Systems](https://amberljc.github.io/blog/2025-09-05-agentic-rl-systems.html) - Amber Li. Overview of agentic reinforcement learning systems and their architecture for autonomous task completion.
 
 ## 9. Hardware Architecture & Co-Design
 
@@ -500,6 +524,8 @@ Recommended reading order:
 - [DeltaNet Explained (Part II)](https://sustcsonglin.github.io/blog/2024/deltanet-2/) - Songlin Yang. Algorithm for parallelizing DeltaNet computation across the sequence length dimension.
 
 - [Titans + MIRAS: Helping AI Have Long-Term Memory](https://research.google/blog/titans-miras-helping-ai-have-long-term-memory/) - Google Research. Research on Titans and MIRAS architectures for enabling long-term memory in AI models.
+
+- [DeepSeek-V3.2 Technical Report](https://github.com/deepseek-ai/DeepSeek-V3.2-Exp/blob/main/DeepSeek_V3_2.pdf) - DeepSeek AI. Technical report for DeepSeek-V3.2, covering architecture improvements and training methodology.
 
 ## 11. Compiler & DSL Approaches
 
@@ -579,6 +605,8 @@ Recommended reading order:
 
 - [Theseus: A Distributed GPU-Accelerated Query Processing Platform](https://medium.com/p/paper-summary-theseus-a-distributed-and-scalable-gpu-accelerated-query-processing-platform-c4b3e020252a) - Paper summary of Theseus, a distributed query processing system leveraging GPU acceleration for scalable data operations.
 
+- [KV-Cache Wins You Can See: From Prefix Caching in vLLM to Distributed Caching in llm-d](https://llm-d.ai/blog/kvcache-wins-you-can-see) - llm-d. How llm-d enables smarter prefix-aware, load- and SLO-aware routing for better latency and throughput.
+
 #### Tier 3
 
 - [ANN v3: 200ms p99 Query Latency over 100 Billion Vectors](https://turbopuffer.com/blog/ann-v3) - Turbopuffer. ANN search at 100+ billion vector scale with 200ms p99 latency at 1k QPS and 92% recall, demonstrating extreme-scale vector search infrastructure.
@@ -630,6 +658,8 @@ Recommended reading order:
 - [HuggingFace Inference Providers with VS Code](https://huggingface.co/docs/inference-providers/en/guides/vscode) - HuggingFace. Guide to using HuggingFace inference providers directly within GitHub Copilot Chat in VS Code.
 
 - [asxiv.org](https://asxiv.org/) - AI-powered interface for exploring and understanding arXiv research papers.
+
+- [FlashInfer: Kernel Library for LLM Serving](https://github.com/flashinfer-ai/flashinfer) - FlashInfer. High-performance kernel library for LLM serving, providing optimized attention and decoding kernels.
 
 #### Tier 2
 
