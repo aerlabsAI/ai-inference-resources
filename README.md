@@ -49,6 +49,12 @@ Recommended reading order:
 
 - [11 Production LLM Serving Engines: vLLM vs TGI vs Ollama](https://medium.com/@techlatest.net/11-production-llm-serving-engines-vllm-vs-tgi-vs-ollama-162874402840) - TechLatest. Comparative survey of 11 production LLM serving engines with trade-off analysis for different deployment scenarios.
 
+- [How Fast Can We Perform a Forward Pass?](https://bounded-regret.ghost.io/how-fast-can-we-perform-a-forward-pass/) - Bounded Regret. Analysis of theoretical and practical limits on transformer forward pass speed, complementing kipply's Transformer Inference Arithmetic.
+
+- [How Do MoE Models Compare to Dense Models in Inference?](https://epoch.ai/gradient-updates/moe-vs-dense-models-inference) - Epoch AI. Comparison of mixture-of-experts vs dense models focusing on inference costs, efficiency, and decoding dynamics.
+
+- [LLM Routing](https://www.liuxunzhuo.com/llm-routing) - Xunzhuo Liu. Overview of LLM routing strategies for directing requests to optimal models based on task characteristics.
+
 #### Tier 2
 
 - [Defeating Nondeterminism in LLM Inference](https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/) - Thinking Machines Lab. Explores why LLM inference produces non-reproducible results and techniques to achieve deterministic outputs.
@@ -93,6 +99,16 @@ Recommended reading order:
 
 - [vLLM-Omni v0.12.0rc1](https://github.com/vllm-project/vllm-omni/releases/tag/v0.12.0rc1) - vLLM Project. Major release focused on multi-modal inference capabilities with 187 commits from 45 contributors.
 
+- [vLLM Metal: Apple Silicon Plugin](https://github.com/vllm-project/vllm-metal) - vLLM Project. Community-maintained hardware plugin enabling vLLM on Apple Silicon GPUs.
+
+- [vLLM Daily](https://github.com/vllm-project/vllm-daily) - vLLM Project. Daily summarization of merged PRs in the vLLM repository, useful for tracking development velocity and features.
+
+- [MiMo-V2-Flash: Efficient Reasoning and Agentic Foundation Model](https://github.com/XiaomiMiMo/MiMo-V2-Flash) - Xiaomi. Efficient reasoning, coding, and agentic foundation model with [vLLM recipe](https://docs.vllm.ai/projects/recipes/en/latest/MiMo/MiMo-V2-Flash.html).
+
+- [SGLang: Enable Return Routed Experts (PR #12162)](https://github.com/sgl-project/sglang/pull/12162) - ocss884. Feature enabling SGLang to return routed experts during forward pass for RL training integration, based on MiMo's R3 protocol.
+
+- [optillm: Optimizing Inference Proxy for LLMs](https://github.com/algorithmicsuperintelligence/optillm) - Algorithmic Superintelligence. Inference optimization proxy that sits between clients and LLM endpoints for improved throughput and cost efficiency.
+
 #### Tier 3
 
 - [llm-d Architecture](https://llm-d.ai/docs/architecture) - llm-d. Overview of the llm-d distributed inference architecture, covering component design and system topology for large-scale LLM serving.
@@ -111,9 +127,15 @@ Recommended reading order:
 
 - [Paged Attention from First Principles: A View Inside vLLM](https://hamzaelshafie.bearblog.dev/paged-attention-from-first-principles-a-view-inside-vllm/) - Hamza El Shafie. Ground-up explanation of PagedAttention, the virtual memory-inspired technique that enables efficient KV cache management in LLM serving.
 
+- [Rotary Embeddings: A Relative Revolution](https://blog.eleuther.ai/rotary-embeddings/) - EleutherAI. Explanation of Rotary Positional Embedding (RoPE), which unifies absolute and relative position encoding approaches used in most modern LLMs.
+
+- [Attention Normalizes the Wrong Norm](https://convergentthinking.sh/posts/attention-normalizes-the-wrong-norm/) - Convergent Thinking. Analysis of why softmax constrains the L1 norm to 1 when it should constrain the L2 norm, with implications for attention mechanism design.
+
 #### Tier 2
 
 - [Long Context Attention](https://nrehiew.github.io/blog/long_context/) - nrehiew. Analysis of attention mechanisms for long-context scenarios, covering the computational and memory challenges of scaling sequence length.
+
+- [QSInference: Fast and Memory Efficient Sparse Attention](https://github.com/yogeshsinghrbt/QSInference) - Yogesh Singh. Library for fast and memory-efficient sparse attention computation during inference.
 
 - [Flash Attention from Scratch Part 4: Bank Conflicts & Swizzling](https://lubits.ch/flash/Part-4) - Sonny. Detailed walkthrough of GPU memory bank conflicts and swizzling techniques in Flash Attention kernel implementation.
 
@@ -129,15 +151,27 @@ Recommended reading order:
 
 - [DroPE: Extending Context by Dropping Positional Embeddings](https://pub.sakana.ai/DroPE/) - Sakana AI. Simple method for extending pretrained LLM context length without long-context fine-tuning by selectively dropping positional embeddings.
 
+- [PQCache: Product Quantization for KV Cache Compression](https://sky-light.eecs.berkeley.edu/#/blog/pqcache) - UC Berkeley. Using product quantization to compress KV cache for memory-efficient long-context inference.
+
+- [kvcached: Virtualized Elastic KV Cache for Dynamic GPU Sharing](https://github.com/ovg-project/kvcached) - OVG Project. Virtualized KV cache management enabling dynamic GPU sharing and elastic memory allocation across inference workloads.
+
+- [Optimizing Long-Context Prefill on Multiple Older-Generation GPU Nodes](https://moreh.io/blog/optimizing-long-context-prefill-on-multiple-older-generation-gpu-nodes-251226/) - Moreh. Techniques for efficient long-context prefill computation distributed across older GPU hardware.
+
 ## 4. Quantization & Model Compression
 
 #### Tier 1
 
 - [A Visual Guide to Quantization](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization) - Maarten Grootendorst. Accessible visual introduction to quantization methods for reducing LLM memory footprint and compute requirements.
 
+- [Product Quantization: Compressing High-Dimensional Vectors by 97%](https://www.pinecone.io/learn/series/faiss/product-quantization/) - Pinecone. How product quantization dramatically compresses high-dimensional vectors for 97% less memory and 5.5x faster nearest-neighbor search.
+
 #### Tier 2
 
+- [MS-AMP: Microsoft Automatic Mixed Precision Library](https://github.com/Azure/MS-AMP/tree/main) - Microsoft Azure. Automatic mixed precision library for efficient training and inference with advanced precision management.
+
 - [torchao: Quantized Models and Quantization Recipes on HuggingFace Hub](https://pytorch.org/blog/torchao-quantized-models-and-quantization-recipes-now-available-on-huggingface-hub/) - PyTorch Blog. Official guide to PyTorch-native quantization workflows using torchao, with pre-quantized model availability on HuggingFace.
+
+- [Quantization: CUDA vs Triton](https://www.dropbox.com/scl/fi/hzfx1l267m8gwyhcjvfk4/Quantization-Cuda-vs-Triton.pdf?rlkey=s4j64ivi2kpp2l0uq8xjdwbab&e=1&dl=0) - Comparison of CUDA and Triton implementations for quantization kernels, covering performance trade-offs and implementation strategies.
 
 - [PyTorch ao MX Kernels (PTX)](https://github.com/pytorch/ao/blob/18dbe875a0ce279739dda06fda656e76845acaac/torchao/csrc/cuda/mx_kernels/ptx.cuh#L73) - PyTorch. Reference implementation of microscaling (MX) format kernels in PTX, showing low-level CUDA intrinsics for mixed-precision compute.
 
@@ -179,6 +213,8 @@ Recommended reading order:
 
 - [CPU-GPU Synchronization](https://tomasruizt.github.io/posts/08_cpu_gpu_synchronization/) - Tomas Ruiz. Guide to understanding and managing CPU-GPU synchronization, a common source of performance bottlenecks.
 
+- [GPU Architecture Deep Dive: From HBM to Tensor Cores](https://www.youtube.com/watch?v=5UWphJWdAHY) - Parallel Routines. Visual explanation of GPU architecture from memory hierarchy (HBM, L2, shared memory) through tensor core operations.
+
 #### Tier 2
 
 - [Outperforming cuBLAS on H100: a Worklog](https://cudaforfun.substack.com/p/outperforming-cublas-on-h100-a-worklog) - CUDA for Fun. Detailed worklog of writing a CUDA matmul kernel that exceeds cuBLAS performance on H100, covering Hopper-specific optimizations.
@@ -198,6 +234,14 @@ Recommended reading order:
 - [Agent-Assisted Kernel Optimization: From PyTorch to Hand-Written Assembly](https://www.wafer.ai/blog/topk-sigmoid-optimization) - Wafer AI. Using an AI agent with ISA analysis tools to achieve 10x speedup on AMD MI300X, compressing weeks of expert kernel optimization work.
 
 - [magnetron: A Homemade PyTorch from Scratch](https://github.com/MarioSieg/magnetron/blob/d3ff3f5c50dbace90adf24e583f6d13a0ac8ee11/magnetron/magnetron_cpu_blas.inl#L3316) - Mario Sieg. WIP PyTorch reimplementation from scratch including CPU BLAS kernels, useful for understanding tensor library internals.
+
+- [Blackwell Pipelining with CuTeDSL](https://veitner.bearblog.dev/blackwell-pipelining-with-cutedsl/) - Simon. Overlapping workloads on Blackwell GPUs using CuTeDSL's asynchronous pipeline primitives for maximum throughput.
+
+- [Effective Transpose on Hopper GPU](https://github.com/simveit/effective_transpose) - simveit. Optimized matrix transpose implementation targeting NVIDIA Hopper architecture.
+
+- [Numerics in World Models](https://0x00b1.github.io/blog/2025/12/25/numerics-in-world-models/) - Analysis of numerical precision considerations in world model implementations and their impact on model behavior.
+
+- [Learn by Doing: TorchInductor Reduction Kernels](https://karthick.ai/blog/2025/Learn-By-Doing-Torchinductor-Reduction/) - Karthick Panner. Hands-on walkthrough of TorchInductor's reduction kernel generation pipeline.
 
 #### Tier 3
 
@@ -231,6 +275,12 @@ Recommended reading order:
 
 - [Distributed Inference on Heterogeneous Accelerators](https://moreh.io/blog/distributed-inference-on-heterogeneous-accelerators-including-gpus-rubin-cpx-and-ai-accelerators-250923/) - Moreh. MoAI Inference Framework for automatic distributed inference across heterogeneous hardware including AMD MI300X, MI308X, and NVIDIA Rubin CPX.
 
+- [UCCL: Efficient Communication Library for GPUs](https://github.com/uccl-project/uccl) - UCCL Project. GPU communication library covering collectives, P2P (KV cache transfer, RL weight transfer), and expert parallelism with GPU-driven operations.
+
+- [Parallel CPU-GPU Execution for LLM Inference on Constrained GPUs](https://arxiv.org/abs/2506.03296) - arXiv. Hybrid GPU-CPU execution for LLM inference that offloads KV cache and attention computation to CPU, addressing GPU memory constraints during autoregressive decoding.
+
+- [DeepSeek R1 671B on AMD MI300X GPUs: Maximum Throughput](https://docs.moreh.io/benchmarking/deepseek_r1_671b_on_amd_mi300x_gpus_maximum_throughput/) - Moreh. Performance evaluation of DeepSeek R1 671B inference across 40 AMD MI300X GPUs (5 servers).
+
 #### Tier 3
 
 - [How To Scale Your Model](https://jax-ml.github.io/scaling-book/) - JAX Team. Comprehensive book covering TPU/GPU architecture, inter-device communication, and parallelism strategies for training and inference at scale.
@@ -252,6 +302,8 @@ Recommended reading order:
 - [LLaMA-Factory: Unified Efficient Fine-Tuning of 100+ LLMs & VLMs](https://github.com/hiyouga/LLaMA-Factory) - hiyouga. Production-ready framework for fine-tuning over 100 language and vision models with LoRA, QLoRA, and full fine-tuning support. ACL 2024.
 
 - [Mistral v0.3 (7B) Continued Pre-Training with Unsloth](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Mistral_v0.3_(7B)-CPT.ipynb) - Unsloth. Google Colab notebook demonstrating continued pre-training of Mistral 7B with Unsloth's optimized training pipeline.
+
+- [Optimizing Large-Scale Pretraining at Character.ai (Squinch)](https://blog.character.ai/squinch/) - Character.AI. Techniques from Noam Shazeer's team for making large-scale transformer training faster and more efficient, now shared publicly.
 
 ## 9. Hardware Architecture & Co-Design
 
@@ -289,6 +341,14 @@ Recommended reading order:
 
 - [nanochat Miniseries v1](https://github.com/karpathy/nanochat/discussions/420) - Andrej Karpathy. Discussion on optimizing LLM families controlled by a compute dial, covering training efficiency and model scaling principles.
 
+- [Deep Sequence Models Tend to Memorize Geometrically](https://arxiv.org/abs/2510.26745) - arXiv. Contrasts associative vs geometric views of how transformers store parametric memory, revealing that memorization follows geometric rather than co-occurrence patterns.
+
+- [Universal Reasoning Model](https://arxiv.org/abs/2512.14693) - arXiv. Systematic analysis of Universal Transformers showing that improvements on ARC-AGI arise from recurrent inductive bias and strong nonlinear computation.
+
+- [mHC: Manifold-Constrained Hyper-Connections](https://arxiv.org/abs/2512.24880) - arXiv. Extension of residual connections via expanded stream width and diversified connectivity patterns while preserving identity mapping properties.
+
+- [KerJEPA: Kernel Discrepancies for Euclidean Self-Supervised Learning](https://arxiv.org/abs/2512.19605) - arXiv. New family of self-supervised learning algorithms using kernel-based regularization for improved training stability and downstream generalization.
+
 ## 11. Compiler & DSL Approaches
 
 #### Tier 1
@@ -300,6 +360,8 @@ Recommended reading order:
 - [AOTInductor: Ahead-of-Time Compilation for PyTorch](https://docs.pytorch.org/docs/stable/torch.compiler_aot_inductor.html) - PyTorch. Official documentation for AOTInductor, enabling ahead-of-time compilation of PyTorch models for deployment without Python runtime dependency.
 
 - [Helion Flex Attention Example](https://github.com/pytorch/helion/blob/main/examples/flex_attention.py) - PyTorch. Reference implementation of flexible attention variants using Helion DSL, demonstrating how to write custom attention kernels with minimal code.
+
+- [CUDA Tile IR](https://github.com/NVIDIA/cuda-tile) - NVIDIA. MLIR-based intermediate representation and compiler infrastructure for CUDA kernel optimization, focusing on tile-based computation patterns targeting NVIDIA tensor cores.
 
 ## 12. Confidential & Secure Inference
 
@@ -321,6 +383,10 @@ Recommended reading order:
 
 - [The Importance of Agent Harness in 2026](https://www.philschmid.de/agent-harness-2026) - Phil Schmid. Why Agent Harnesses are essential for building reliable AI systems capable of handling complex, multi-day tasks.
 
+- [Async Coding Agents](https://benanderson.work/blog/async-coding-agents/) - Ben Anderson. Patterns and architecture for building asynchronous coding agents that can work on multiple tasks concurrently.
+
+- [Shipping at Inference-Speed](https://steipete.me/posts/2025/shipping-at-inference-speed) - Peter Steinberger. Perspective on how AI inference speed changes software development workflows and shipping velocity.
+
 ## 14. Production Inference at Scale
 
 #### Tier 2
@@ -336,6 +402,14 @@ Recommended reading order:
 - [The Hidden Metric Destroying Your AI Agent's Performance](https://www.tensormesh.ai/blog-posts/hidden-metric-ai-agent-performance) - TensorMesh. How enterprise-grade AI-native caching cuts inference costs and latency by up to 10x.
 
 - [Migrating from Slurm to dstack](https://github.com/dstackai/migrate-from-slurm/blob/main/guide.md) - dstack. Step-by-step guide for migrating AI workloads from Slurm to cloud-native dstack orchestration.
+
+- [LMCache Storage ROI Calculator](https://www.tensormesh.ai/tools/lmcache-storage-tco-calculator) - TensorMesh. Calculator for evaluating the ROI of adding storage-backed caching capacity with LMCache.
+
+- [LMCache Context Engineering: 92% Prefix Reuse Rate](https://www.linkedin.com/posts/lmcache-lab_we-ran-a-tiny-one-shot-experiment-from-a-activity-7408688760395333632-pfvw) - LMCache Lab. Experiment showing 81% input cost reduction ($6.00 to $1.15) through prefix caching on a SWE-bench task with Claude Code.
+
+- [AI Inference Costs in 2025: The $255B Market's Energy Crisis](https://www.tensormesh.ai/blog-posts/ai-inference-costs-2025-energy-crisis) - TensorMesh. Analysis of the energy and cost challenges facing the growing AI inference market.
+
+- [Theseus: A Distributed GPU-Accelerated Query Processing Platform](https://medium.com/p/paper-summary-theseus-a-distributed-and-scalable-gpu-accelerated-query-processing-platform-c4b3e020252a) - Paper summary of Theseus, a distributed query processing system leveraging GPU acceleration for scalable data operations.
 
 #### Tier 3
 
@@ -364,6 +438,14 @@ Recommended reading order:
 - [The Ultra-Scale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook) - Nanotron / HuggingFace. Interactive guide to scaling language model training and inference, covering parallelism strategies, communication patterns, and hardware utilization.
 
 - [New AI Research Program](https://newlinesio.substack.com/p/new-ai-research-program-to-connect) - Aayush Saini. Open AI research program connecting researchers and practitioners for collaborative learning.
+
+- [Physics of Language Models: Part 4.1a, How to Build a Versatile Synthetic Dataset](https://www.youtube.com/watch?v=x3G8knjPDbM) - Zeyuan Allen-Zhu. Lecture on constructing synthetic datasets for understanding language model capabilities and limitations.
+
+- [Google's Year in Review: 8 Areas with Research Breakthroughs in 2025](https://blog.google/technology/ai/2025-research-breakthroughs/) - Google. Overview of Google's key AI research breakthroughs spanning models, products, science, and robotics.
+
+- [Productionizing Diffusion Models](https://a-r-r-o-w.github.io/blog/3_blossom/00001_productionizing_diffusion-1/) - Arrow. Guide to bringing diffusion models from research to production deployment.
+
+- [vLLM Internals Deep Dive (Thread)](https://x.com/archiexzzz/status/2005182120977989839) - Archie Sengupta. Visual thread diving deep into vLLM's internal architecture and design decisions.
 
 ## 17. Tools & Libraries
 
