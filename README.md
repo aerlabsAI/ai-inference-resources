@@ -187,6 +187,26 @@ Recommended reading order:
 
 - [Disaggregated Serving in TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/blogs/tech_blog/blog5_Disaggregated_Serving_in_TensorRT-LLM.md) - NVIDIA. Technical deep-dive into disaggregated serving architecture in TensorRT-LLM, separating prefill and decode stages.
 
+- [From Monolithic to Modular: Scaling Semantic Routing with Extensible Architecture](https://blog.vllm.ai/2025/10/27/semantic-router-modular.html) - vLLM Blog. How refactoring the vLLM Semantic Router's Rust-based classification layer addresses computational scaling challenges through extensible architecture.
+
+- [vLLM Semantic Router](https://vllm-semantic-router.com/) - vLLM. Official site for the AI-powered intelligent Mixture-of-Models router with neural network processing.
+
+- [Signal-Decision Driven Architecture: Reshaping Semantic Routing at Scale](https://blog.vllm.ai/2025/11/19/signal-decision.html) - vLLM Blog. Evolution of vLLM Semantic Router from classification-based to signal-decision driven architecture for production AI systems.
+
+- [Cornserve: Easy, Fast, and Scalable Multimodal AI](https://github.com/cornserve-ai/cornserve) - Cornserve AI. Framework for easy, fast, and scalable multimodal AI serving.
+
+- [Speculators: Speculative Decoding Library for vLLM](https://github.com/vllm-project/speculators) - vLLM Project. Unified library for building, evaluating, and storing speculative decoding algorithms for LLM inference in vLLM.
+
+- [LPLB: MoE Load Balancer Based on Linear Programming](https://github.com/deepseek-ai/LPLB) - DeepSeek AI. Early research stage MoE load balancer using linear programming for efficient expert routing.
+
+- [SGLang Development Roadmap 2025 Q4](https://github.com/sgl-project/sglang/issues/12780) - SGLang Project. Official development roadmap covering P/D disaggregation, feature compatibility, and reliability targets for Q4 2025.
+
+- [DeepSpeed: Deep Learning Optimization Library](https://github.com/deepspeedai/DeepSpeed) - DeepSpeed AI. Deep learning optimization library that makes distributed training and inference easy, efficient, and effective.
+
+- [Spec-Bench: Comprehensive Benchmark for Speculative Decoding](https://github.com/hemingkx/Spec-Bench) - hemingkx. Comprehensive benchmark and unified evaluation platform for speculative decoding methods. ACL 2024 Findings.
+
+- [State of the Model Serving Communities — November 2025](https://inferenceops.substack.com/p/state-of-the-model-serving-communities-ea6) - InferenceOps. Monthly update on AI/ML model inference communities including contributions from Red Hat AI teams.
+
 #### Tier 3
 
 - [llm-d Architecture](https://llm-d.ai/docs/architecture) - llm-d. Overview of the llm-d distributed inference architecture, covering component design and system topology for large-scale LLM serving.
@@ -232,6 +252,10 @@ Recommended reading order:
 - [REFORM: A New Approach for Reasoning AI to Handle Ultra-Long Inputs](https://www.youtube.com/watch?v=pfLHtbT6cO4) - AER Labs. Video on REFORM, a method enabling reasoning AI models to process extremely long input sequences efficiently.
 
 - [How to Reduce KV Cache Bottlenecks with NVIDIA Dynamo](https://developer.nvidia.com/blog/how-to-reduce-kv-cache-bottlenecks-with-nvidia-dynamo/) - Amr Elmeleegy, NVIDIA. Techniques for reducing KV cache bottlenecks in LLM inference using NVIDIA Dynamo's intelligent caching and routing.
+
+- [A User's Guide to FlexAttention in FlashAttention CuTe DSL](https://research.colfax-intl.com/a-users-guide-to-flexattention-in-flash-attention-cute-dsl/) - Reuben Stern, Colfax Research. Guide to implementing attention variants (causal, sliding window, etc.) using FlexAttention in FlashAttention's CuTe DSL.
+
+- [Solve the GPU Cost Crisis with kvcached](https://yifanqiao.notion.site/Solve-the-GPU-Cost-Crisis-with-kvcached-289da9d1f4d68034b17bf2774201b141) - Yifan Qiao. How virtualized, elastic KV cache enables LLM serving on shared GPUs, reducing GPU costs.
 
 #### Tier 3
 
@@ -285,6 +309,12 @@ Recommended reading order:
 
 - [Gemlite: Custom Low-Bit Fused CUDA Kernels](https://dropbox.github.io/gemlite_blogpost/) - Dropbox. CUDA kernels for building custom low-bit fused GEMV operations with sparse bitpacking and dequantization.
 
+- [Survey of Quantization Formats](https://github.com/vipulSharma18/Survey-of-Quantization-Formats) - Vipul Sharma. Survey of modern quantization formats (MXFP8, NVFP4) and inference optimization tools (TorchAO, GemLite) with benchmarking results on RTX 4090.
+
+- [INT vs FP: Comparing Low-Bit Integer and Float-Point Formats](https://github.com/ChenMnZ/INT_vs_FP) - ChenMnZ. Framework for comparing low-bit integer and floating-point quantization formats for LLM inference.
+
+- [GPTQModel: LLM Quantization Toolkit](https://github.com/ModelCloud/GPTQModel) - ModelCloud. LLM model quantization toolkit with hardware acceleration support for NVIDIA CUDA, AMD ROCm, Intel XPU, and CPU via HuggingFace, vLLM, and SGLang.
+
 #### Tier 3
 
 - [AirLLM: 70B Inference with Single 4GB GPU](https://github.com/lyogavin/airllm) - lyogavin. Library enabling inference of 70B-parameter models on a single 4GB GPU through layer-wise loading and quantization techniques.
@@ -318,6 +348,8 @@ Recommended reading order:
 - [NVIDIA Parallel Thread Execution (PTX) ISA](https://docs.nvidia.com/cuda/parallel-thread-execution/) - NVIDIA. Official documentation for NVIDIA's Parallel Thread Execution ISA, the low-level virtual instruction set for CUDA GPU programming.
 
 - [CUDA Programming Guide](https://docs.nvidia.com/cuda/cuda-programming-guide/) - NVIDIA. Official CUDA programming guide covering the CUDA programming model, API reference, and best practices for GPU kernel development.
+
+- [Reduction (Sum) Series: Part 1 — Introduction](https://kathsucurry.github.io/cuda/2025/10/14/reduction_sum_part1.html) - kathsucurry. Introductory guide to implementing parallel sum reduction using CUDA, covering key concepts and kernel design.
 
 #### Tier 2
 
@@ -365,6 +397,10 @@ Recommended reading order:
 
 - [AMD GPU Debugging](https://thegeeko.me/blog/amd-gpu-debugging/) - thegeeko. Guide to debugging GPU programs on AMD hardware, covering ROCm debugging tools and techniques.
 
+- [Reduction (Sum) Series: Part 2 — Implementation](https://kathsucurry.github.io/cuda/2025/10/27/reduction_sum_part2.html) - kathsucurry. Hands-on process for implementing and optimizing sum reduction kernels, based on Mark Harris's optimization techniques.
+
+- [The GPU Observability Gap: Why We Need eBPF on GPU Devices](https://eunomia.dev/blog/2025/10/14/the-gpu-observability-gap-why-we-need-ebpf-on-gpu-devices/) - Eunomia. Analysis of the observability gap in GPU workloads and how eBPF can provide kernel-level visibility for GPU device monitoring.
+
 #### Tier 3
 
 - [Rust GPU: The Future of GPU Programming](https://rust-gpu.github.io/) - Rust GPU Project. Toolchain for writing GPU shaders and compute kernels in Rust, offering memory safety guarantees for GPU code.
@@ -386,6 +422,10 @@ Recommended reading order:
 #### Tier 2
 
 - [TensorRT-LLM: Combining Guided Decoding and Speculative Decoding](https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs%2Fsource%2Fblogs%2Ftech_blog%2Fblog12_Combining_Guided_Decoding_and_Speculative_Decoding.md) - NVIDIA. Explores the intersection of structured output generation and speculative decoding for faster constrained inference in TensorRT-LLM.
+
+- [TSON: Token-Efficient Structured Object Notation for LLMs](https://github.com/zenoaihq/tson) - Zeno AI. MIT-licensed token-efficient structured object notation designed to reduce token usage when generating structured data with LLMs.
+
+- [Tool Calling in Inference](https://www.baseten.co/blog/tool-calling-in-inference/) - Baseten. Deep-dive into tool calling basics, why quality varies between providers, and how to build reliable and scalable tool calling for LLMs.
 
 ## 7. Distributed & Multi-GPU Inference
 
@@ -469,6 +509,14 @@ Recommended reading order:
 
 - [Agentic RL Systems](https://amberljc.github.io/blog/2025-09-05-agentic-rl-systems.html) - Amber Li. Overview of agentic reinforcement learning systems and their architecture for autonomous task completion.
 
+- [On-Policy Distillation](https://thinkingmachines.ai/blog/on-policy-distillation/) - Thinking Machines Lab. Analysis showing on-policy, dense supervision is a useful and effective tool for knowledge distillation.
+
+- [The Smol Training Playbook: Secrets to Building World-Class LLMs](https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook) - HuggingFace TB. Comprehensive playbook covering secrets and best practices for training high-quality language models.
+
+- [No More Train-Inference Mismatch: Bitwise Consistent On-Policy RL](https://blog.vllm.ai/2025/11/10/bitwise-consistent-train-inference.html) - vLLM Blog. Demonstrating bitwise consistent on-policy RL with TorchTitan as training engine and vLLM as inference engine, ensuring matching numerics.
+
+- [When Speed Kills Stability: Demystifying RL Collapse from the Training-Inference Mismatch](https://yingru.notion.site/When-Speed-Kills-Stability-Demystifying-RL-Collapse-from-the-Training-Inference-Mismatch-271211a558b7808d8b12d403fd15edda) - Yingru Li et al. Deep analysis of a critical systems-level bottleneck causing RL training collapse due to training-inference mismatch.
+
 ## 9. Hardware Architecture & Co-Design
 
 #### Tier 1
@@ -526,6 +574,10 @@ Recommended reading order:
 - [Titans + MIRAS: Helping AI Have Long-Term Memory](https://research.google/blog/titans-miras-helping-ai-have-long-term-memory/) - Google Research. Research on Titans and MIRAS architectures for enabling long-term memory in AI models.
 
 - [DeepSeek-V3.2 Technical Report](https://github.com/deepseek-ai/DeepSeek-V3.2-Exp/blob/main/DeepSeek_V3_2.pdf) - DeepSeek AI. Technical report for DeepSeek-V3.2, covering architecture improvements and training methodology.
+
+- [PLEIADES: Building Temporal Kernels from Orthogonal Polynomials](https://www.youtube.com/watch?v=B5bzYl4zjPU) - PeaBrane. NeurIPS presentation on PLEIADES, constructing temporal kernels using orthogonal polynomials for efficient sequence modeling.
+
+- [Loads and Loads of Fluffy Kittens](https://hazyresearch.stanford.edu/blog/2025-11-17-fluffy-kittens) - Stanford HazyResearch. Research on efficient model architectures and scaling approaches from the HazyResearch group.
 
 ## 11. Compiler & DSL Approaches
 
@@ -607,6 +659,10 @@ Recommended reading order:
 
 - [KV-Cache Wins You Can See: From Prefix Caching in vLLM to Distributed Caching in llm-d](https://llm-d.ai/blog/kvcache-wins-you-can-see) - llm-d. How llm-d enables smarter prefix-aware, load- and SLO-aware routing for better latency and throughput.
 
+- [Host Overhead is Killing Your Inference Efficiency](https://modal.com/blog/host-overhead-inference-efficiency) - Modal. Analysis of how CPU-side host overhead blocks GPU utilization and techniques to eliminate it for better inference efficiency.
+
+- [Democratizing AI Compute with AMD Using SkyPilot](https://rocm.blogs.amd.com/ecosystems-and-partners/democratizing-multicloud-skypi/README.html) - ROCm Blogs. How SkyPilot integrates with AMD's open AI stack for seamless multi-cloud deployment and NVIDIA-to-AMD GPU migration.
+
 #### Tier 3
 
 - [ANN v3: 200ms p99 Query Latency over 100 Billion Vectors](https://turbopuffer.com/blog/ann-v3) - Turbopuffer. ANN search at 100+ billion vector scale with 200ms p99 latency at 1k QPS and 92% recall, demonstrating extreme-scale vector search infrastructure.
@@ -624,6 +680,8 @@ Recommended reading order:
 - [FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems](https://arxiv.org/abs/2601.00227v1) - arXiv. Framework connecting AI-generated kernel creation, benchmarking, and real-world inference system integration in a closed-loop workflow.
 
 - [FlashInfer MLSys 2026 Tutorial](http://mlsys26.flashinfer.ai/) - FlashInfer. Tutorial materials from MLSys 2026 on FlashInfer's attention kernel library and LLM inference optimization.
+
+- [Sorting-Free GPU Kernels for LLM Sampling](https://flashinfer.ai/2025/03/10/sampling.html) - FlashInfer. Technical blog on sorting-free GPU kernel implementations for efficient LLM sampling operations.
 
 ## 16. Courses & Comprehensive Guides
 
