@@ -821,12 +821,6 @@ Recommended reading order:
 
 ---
 
-## Supplementary Materials
-
-- [AI Inference Lab: Edge AI & HW Co-Design](https://discord.com/channels/aerlabs) - Marco Gonzalez. Presentation on edge AI inference and hardware co-design considerations.
-
----
-
 ## Contributing
 
 Have a resource to share? Open a pull request or issue with the link, a brief description, and suggested category/tier placement.
