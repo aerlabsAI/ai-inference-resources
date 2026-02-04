@@ -55,6 +55,8 @@ Recommended reading order:
 
 - [LLM Routing](https://www.liuxunzhuo.com/llm-routing) - Xunzhuo Liu. Overview of LLM routing strategies for directing requests to optimal models based on task characteristics.
 
+- [How LLM Inference Works](https://arpitbhayani.me/blogs/how-llm-inference-works) - Arpit Bhayani. End-to-end walkthrough of the LLM inference journey from prompt to response, covering tokenization, embedding, and autoregressive generation.
+
 #### Tier 2
 
 - [Defeating Nondeterminism in LLM Inference](https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/) - Thinking Machines Lab. Explores why LLM inference produces non-reproducible results and techniques to achieve deterministic outputs.
@@ -70,6 +72,10 @@ Recommended reading order:
 - [Thinking Through How Pretraining vs RL Learn](https://www.dwarkesh.com/p/bits-per-sample) - Dwarkesh Patel. Analysis of how pretraining and reinforcement learning differ in their learning dynamics, with implications for RLVR progress.
 
 - [Energy Use of AI Inference: Efficiency Pathways and Test-Time Compute](https://arxiv.org/abs/2509.20241) - arXiv. Analysis of per-query energy use in AI inference as scaling reaches billions of queries, providing estimates for capacity planning, emissions accounting, and efficiency prioritization.
+
+- [Wider or Deeper? Scaling LLM Inference-Time Compute with Adaptive Parallel Reasoning](https://openreview.net/forum?id=jAsr5GHt3P) - OpenReview. Analysis of how increasing inference-time computation through repeated sampling and adaptive parallel reasoning boosts LLM reasoning capabilities.
+
+- [Souper Model: How Simple Arithmetic Unlocks State-of-the-Art LLM Performance](https://ai.meta.com/research/publications/souper-model-how-simple-arithmetic-unlocks-state-of-the-art-llm-performance/) - Meta AI. Research on how simple model merging arithmetic achieves state-of-the-art LLM performance.
 
 #### Tier 3
 
@@ -207,6 +213,16 @@ Recommended reading order:
 
 - [State of the Model Serving Communities — November 2025](https://inferenceops.substack.com/p/state-of-the-model-serving-communities-ea6) - InferenceOps. Monthly update on AI/ML model inference communities including contributions from Red Hat AI teams.
 
+- [AutoRound Meets SGLang: Enabling Quantized Model Inference](https://lmsys.org/blog/2025-11-13-AutoRound/) - LMSYS Org. Official collaboration between SGLang and AutoRound enabling low-bit quantization for efficient LLM inference through signed-gradient optimization.
+
+- [Building Clean, Maintainable vLLM Modifications Using the Plugin System](https://blog.vllm.ai/2025/11/20/vllm-plugin-system.html) - vLLM Blog. Guide to building clean and maintainable vLLM modifications using the official plugin system.
+
+- [Speculators: Standardized, Production-Ready Speculative Decoding](https://developers.redhat.com/articles/2025/11/19/speculators-standardized-production-ready-speculative-decoding) - Red Hat Developer. How the speculators library standardizes speculative decoding for production deployment.
+
+- [Streamlined Multi-Node Serving with Ray Symmetric-Run](https://blog.vllm.ai/2025/11/22/ray-symmetric-run.html) - vLLM Blog. New Ray command for launching vLLM servers on every node in a cluster, simplifying multi-node model serving on HPC setups.
+
+- [Introducing Serverless LoRA Inference](https://wandb.ai/wandb_fc/product-announcements-fc/reports/Introducing-Serverless-LoRA-Inference--VmlldzoxNTEyNDU4OQ) - W&B. Bring-your-own-LoRA serving for fine-tuned models on Weights & Biases Inference.
+
 #### Tier 3
 
 - [llm-d Architecture](https://llm-d.ai/docs/architecture) - llm-d. Overview of the llm-d distributed inference architecture, covering component design and system topology for large-scale LLM serving.
@@ -223,6 +239,8 @@ Recommended reading order:
 
 - [GPU Model Runner V2 (vLLM PR #25266)](https://github.com/vllm-project/vllm/pull/25266/files) - WoosukKwon. Major vLLM refactor removing persistent batch, using NumPy arrays for CPU states, and simplifying pre-/post-processing for the GPU model runner.
 
+- [SGLang RFC: Block Diffusion Large Language Model (dLLM) Framework](https://github.com/sgl-project/sglang/pull/12766) - SGLang Project. RFC for supporting diffusion language models (dLLMs) in SGLang, following LLaDA's debut as the first diffusion language model.
+
 ## 3. Attention Mechanisms & Memory Optimization
 
 #### Tier 1
@@ -234,6 +252,10 @@ Recommended reading order:
 - [Attention Normalizes the Wrong Norm](https://convergentthinking.sh/posts/attention-normalizes-the-wrong-norm/) - Convergent Thinking. Analysis of why softmax constrains the L1 norm to 1 when it should constrain the L2 norm, with implications for attention mechanism design.
 
 - [LLM Optimization Lecture 4: Grouped Query Attention, Paged Attention](https://youtu.be/Myhz-whrq5Q?si=R4QXM0RzDfaAmAk4) - Faradawn Yang. Video lecture covering Grouped Query Attention and Paged Attention mechanisms for efficient LLM inference.
+
+- [How Attention Got So Efficient: GQA, MLA, DSA](https://youtu.be/Y-o545eYjXM?si=ERqziyDvW5Bm3uJ4) - Jia-Bin Huang. Video explaining the evolution of efficient attention mechanisms from Grouped Query Attention to Multi-Latent Attention and DeepSeek Attention.
+
+- [The Q, K, V Matrices](https://arpitbhayani.me/blogs/qkv-matrices) - Arpit Bhayani. Ground-up construction of Query, Key, and Value matrices at the core of the attention mechanism in transformers.
 
 #### Tier 2
 
@@ -256,6 +278,12 @@ Recommended reading order:
 - [A User's Guide to FlexAttention in FlashAttention CuTe DSL](https://research.colfax-intl.com/a-users-guide-to-flexattention-in-flash-attention-cute-dsl/) - Reuben Stern, Colfax Research. Guide to implementing attention variants (causal, sliding window, etc.) using FlexAttention in FlashAttention's CuTe DSL.
 
 - [Solve the GPU Cost Crisis with kvcached](https://yifanqiao.notion.site/Solve-the-GPU-Cost-Crisis-with-kvcached-289da9d1f4d68034b17bf2774201b141) - Yifan Qiao. How virtualized, elastic KV cache enables LLM serving on shared GPUs, reducing GPU costs.
+
+- [PrisKV: A Colocated Tiered KVCache Store for LLM Serving](https://aibrix.github.io/posts/2025-11-26-priskv-intro/) - AIBrix. Tiered KV cache store architecture for LLM serving, addressing memory pressure through colocated multi-tier caching.
+
+- [Flash Linear Attention](https://github.com/fla-org/flash-linear-attention) - FLA Org. Efficient implementations of state-of-the-art linear attention models for fast sequence modeling.
+
+- [Diffusers Attention Backends](https://huggingface.co/docs/diffusers/main/en/optimization/attention_backends) - HuggingFace. Guide to attention backend options in the Diffusers library for optimizing diffusion model inference.
 
 #### Tier 3
 
@@ -292,6 +320,8 @@ Recommended reading order:
 - [PyTorch ao MX Kernels (PTX)](https://github.com/pytorch/ao/blob/18dbe875a0ce279739dda06fda656e76845acaac/torchao/csrc/cuda/mx_kernels/ptx.cuh#L73) - PyTorch. Reference implementation of microscaling (MX) format kernels in PTX, showing low-level CUDA intrinsics for mixed-precision compute.
 
 - [FlashInfer: Support for Advanced Quantization (HQQ)](https://github.com/flashinfer-ai/flashinfer/issues/2423) - FlashInfer. Discussion on extending FlashInfer's FP4 quantization to support HQQ and other advanced quantization algorithms beyond max-based scaling.
+
+- [8-bit Rotational Quantization: Compress Vectors by 4x](https://weaviate.io/blog/8-bit-rotational-quantization) - Weaviate. Novel vector quantization algorithm using random rotations to improve the speed-quality tradeoff of vector search.
 
 - [SmolLM-Smashed: Tiny Giants, Optimized for Speed](https://huggingface.co/blog/PrunaAI/smollm-tiny-giants-optimized-for-speed) - Pruna AI. Optimization techniques applied to small language models for maximum inference throughput.
 
@@ -401,6 +431,10 @@ Recommended reading order:
 
 - [The GPU Observability Gap: Why We Need eBPF on GPU Devices](https://eunomia.dev/blog/2025/10/14/the-gpu-observability-gap-why-we-need-ebpf-on-gpu-devices/) - Eunomia. Analysis of the observability gap in GPU workloads and how eBPF can provide kernel-level visibility for GPU device monitoring.
 
+- [Demystifying Numeric Conversions in CuTeDSL](https://veitner.bearblog.dev/demystifying-numeric-conversions-in-cutedsl/) - Simon. Guide to numeric type conversion primitives in CuTeDSL, covering the conversion hierarchy from high-level to low-level types.
+
+- [CUTLASS Python DSL: Compile with TVM FFI](https://docs.nvidia.com/cutlass/latest/media/docs/pythonDSL/cute_dsl_general/compile_with_tvm_ffi.html) - NVIDIA. Documentation on compiling CUTLASS Python DSL kernels using TVM FFI for deployment.
+
 #### Tier 3
 
 - [Rust GPU: The Future of GPU Programming](https://rust-gpu.github.io/) - Rust GPU Project. Toolchain for writing GPU shaders and compute kernels in Rust, offering memory safety guarantees for GPU code.
@@ -412,6 +446,8 @@ Recommended reading order:
 - [B200 Blockscaled GEMM: The Setup](https://veitner.bearblog.dev/b200-blockscaled-gemm-the-setup/) - Simon. Analysis of blockscaled GEMM kernel setup on NVIDIA B200, covering layout calculations, MMA operation setup, and kernel initialization.
 
 - [cuTile Python](https://github.com/PeaBrane/cutile-python) - PeaBrane. Python bindings for cuTile, a programming model for writing parallel kernels for NVIDIA GPUs.
+
+- [Inside VOLT: Designing an Open-Source GPU Compiler](https://arxiv.org/abs/2511.13751) - arXiv. Design of VOLT, an open-source GPU compiler for emerging open GPU architectures with custom ISAs, addressing the gap in open SIMT compiler infrastructure.
 
 ## 6. Structured Output & Guided Decoding
 
@@ -462,6 +498,8 @@ Recommended reading order:
 - [Power Up FSDP2 as a Flexible Training Backend for Miles](https://lmsys.org/blog/2025-12-03-miles-fsdp/) - LMSYS Org. Adding FSDP to Miles as a more flexible training backend for large-scale model training.
 
 - [Shift Parallelism: Low-Latency, High-Throughput LLM Inference](https://arxiv.org/abs/2509.16495) - arXiv. Novel parallelism strategy combining benefits of tensor parallelism (low latency) and data parallelism (high throughput) for efficient LLM inference.
+
+- [The vLLM MoE Playbook: A Practical Guide to TP, DP, PP and Expert Parallelism](https://rocm.blogs.amd.com/software-tools-optimization/vllm-moe-guide/README.html) - ROCm Blogs. Practical guide to combining tensor, data, pipeline, and expert parallelism for MoE models on vLLM deployments.
 
 #### Tier 3
 
@@ -517,6 +555,12 @@ Recommended reading order:
 
 - [When Speed Kills Stability: Demystifying RL Collapse from the Training-Inference Mismatch](https://yingru.notion.site/When-Speed-Kills-Stability-Demystifying-RL-Collapse-from-the-Training-Inference-Mismatch-271211a558b7808d8b12d403fd15edda) - Yingru Li et al. Deep analysis of a critical systems-level bottleneck causing RL training collapse due to training-inference mismatch.
 
+- [Vision Reinforcement Learning (VLM RL) with Unsloth](https://docs.unsloth.ai/new/vision-reinforcement-learning-vlm-rl) - Unsloth. Guide to training vision and multimodal models via GRPO and reinforcement learning with Unsloth.
+
+- [Evolution Strategies at the Hyperscale](https://eshyperscale.github.io/) - ES Hyperscale. Making general ML training as fast and easy as inference using evolution strategies.
+
+- [Muon Optimizer Guide: Quick Start and Key Details](https://main-horse.github.io/translations/kexue/11416/#four-versions) - main-horse. Practical guide to the Muon optimizer covering four versions and key implementation details.
+
 ## 9. Hardware Architecture & Co-Design
 
 #### Tier 1
@@ -538,6 +582,12 @@ Recommended reading order:
 - [TinyTPU](https://www.tinytpu.com/) - TinyTPU Project. An attempt to understand and build a TPU by complete novices, with accompanying [GPU MODE lecture](https://www.youtube.com/watch?v=kccs9xk09rw).
 
 - [NVIDIA Nemotron 3 Family](https://research.nvidia.com/labs/nemotron/Nemotron-3/) - NVIDIA Research. Technical details of the Nemotron 3 model family designed for efficient and accurate AI agent deployment.
+
+- [The Chip Made for the AI Inference Era: The Google TPU](https://www.uncoveralpha.com/p/the-chip-made-for-the-ai-inference) - UncoverAlpha. Comprehensive deep-dive covering technical, strategic, and financial aspects of the Google TPU.
+
+- [Google TPUv7: The 900lb Gorilla in the Room](https://t.co/Xh1ohGxVjB) - SemiAnalysis. Full stack review of TPUv7 Ironwood covering Anthropic's 1GW+ TPU usage, new customers, CUDA moat analysis, and next-generation TPUv8.
+
+- [ECE298A-TPU: A Custom AI Chip](https://github.com/WilliamZhang20/ECE298A-TPU) - William Zhang. Custom AI chip project designed to be taped out, useful for understanding TPU architecture from scratch.
 
 ## 10. State-Space Models & Alternative Architectures
 
@@ -579,6 +629,12 @@ Recommended reading order:
 
 - [Loads and Loads of Fluffy Kittens](https://hazyresearch.stanford.edu/blog/2025-11-17-fluffy-kittens) - Stanford HazyResearch. Research on efficient model architectures and scaling approaches from the HazyResearch group.
 
+- [Nemotron Elastic: Towards Efficient Many-in-One Reasoning LLMs](https://arxiv.org/abs/2511.16664) - arXiv. Training a single model that targets multiple scales and deployment objectives through elastic architecture, avoiding separate training runs for each size.
+
+- [TiDAR: Think in Diffusion, Talk in Autoregression](https://www.alphaxiv.org/abs/2511.08923v1) - alphaXiv. Hybrid architecture combining diffusion-based thinking with autoregressive generation for improved reasoning.
+
+- [Weight-Sparse Transformers Have Interpretable Circuits](https://arxiv.org/abs/2511.13653) - arXiv. Training models with sparse weights to produce more human-understandable circuits, advancing mechanistic interpretability.
+
 ## 11. Compiler & DSL Approaches
 
 #### Tier 1
@@ -594,6 +650,8 @@ Recommended reading order:
 - [CUDA Tile IR](https://github.com/NVIDIA/cuda-tile) - NVIDIA. MLIR-based intermediate representation and compiler infrastructure for CUDA kernel optimization, focusing on tile-based computation patterns targeting NVIDIA tensor cores.
 
 - [cuTile Python Samples](https://github.com/PeaBrane/cutile-python/blob/17927b4ea6a5db95eea38f6b72f5696f4c2fae09/samples/PeriodicConv1D.py#L63) - PeaBrane. Sample implementations using the cuTile programming model for writing parallel GPU kernels.
+
+- [Intel ISPC: Implicit SPMD Program Compiler](https://ispc.github.io/index.html) - Intel. Open-source compiler for high-performance SIMD programming on CPU and GPU using an implicit SPMD model.
 
 ## 12. Confidential & Secure Inference
 
@@ -629,6 +687,10 @@ Recommended reading order:
 
 - [OML: AI-native Cryptography for Open-Model Attribution](https://www.youtube.com/watch?v=ygUOUnU6adE) - AER Labs. Talk on the Open Model Layer framework for security and attribution of open-source AI models.
 
+- [Context Engineering for AI Agents: Lessons from Building Manus](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus) - Manus. Practical principles for context engineering in AI agents, sharing local optima discovered while building the Manus agent.
+
+- [Fara-7B: An Efficient Agentic Model for Computer Use](https://www.microsoft.com/en-us/research/blog/fara-7b-an-efficient-agentic-model-for-computer-use/) - Microsoft Research. Efficient 7B agentic small language model for computer use with robust safety measures.
+
 ## 14. Production Inference at Scale
 
 #### Tier 2
@@ -663,6 +725,8 @@ Recommended reading order:
 
 - [Democratizing AI Compute with AMD Using SkyPilot](https://rocm.blogs.amd.com/ecosystems-and-partners/democratizing-multicloud-skypi/README.html) - ROCm Blogs. How SkyPilot integrates with AMD's open AI stack for seamless multi-cloud deployment and NVIDIA-to-AMD GPU migration.
 
+- [Revealing the Hidden Economics of Open Models in the AI Era](https://www.linuxfoundation.org/blog/revealing-the-hidden-economics-of-open-models-in-the-ai-era) - Linux Foundation. Research on the economic role of open models in the AI era from MIT and the Linux Foundation.
+
 #### Tier 3
 
 - [ANN v3: 200ms p99 Query Latency over 100 Billion Vectors](https://turbopuffer.com/blog/ann-v3) - Turbopuffer. ANN search at 100+ billion vector scale with 200ms p99 latency at 1k QPS and 92% recall, demonstrating extreme-scale vector search infrastructure.
@@ -672,6 +736,8 @@ Recommended reading order:
 #### Tier 1
 
 - [Evaluation Guidebook](https://huggingface.co/spaces/OpenEvals/evaluation-guidebook) - OpenEvals / HuggingFace. Comprehensive guide to evaluating AI models, covering evaluation methodologies, metrics, and best practices.
+
+- [AI Hardware Benchmarking & Performance Analysis](https://artificialanalysis.ai/benchmarks/hardware) - Artificial Analysis. Comprehensive benchmarking of AI accelerator systems for LLM inference across chip configurations, inference software, and concurrent load scaling.
 
 #### Tier 2
 
@@ -709,6 +775,10 @@ Recommended reading order:
 
 - [Is Parallel Programming Practical? (perfbook)](https://mirrors.edge.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.html) - Paul McKenney. Comprehensive book on parallel programming from the Linux kernel community, covering synchronization, memory ordering, and performance optimization.
 
+- [Stanford AI Club: Jeff Dean on Important AI Trends](https://www.youtube.com/watch?v=AnTw_t21ayE) - Stanford AI Club. Jeff Dean's talk covering 15 years of ML progress and key AI trends.
+
+- [Build an LLM from Scratch with MAX](https://llm.modular.com/) - Modular. Interactive tutorial for learning LLM internals by building from scratch using Modular's MAX Framework.
+
 ## 17. Tools & Libraries
 
 #### Tier 1
@@ -740,6 +810,8 @@ Recommended reading order:
 - [Chronos-1.5B](https://huggingface.co/squ11z1/Chronos-1.5B) - squ11z1. 1.5B parameter model on HuggingFace.
 
 - [Transformers v5.0.0rc0](https://github.com/huggingface/transformers/releases/tag/v5.0.0rc0) - HuggingFace. Major release candidate for Transformers v5 with significant API changes including dynamic weight loading and tokenization updates.
+
+- [paperreview.ai](https://paperreview.ai/) - AI-powered platform for reviewing and understanding AI research papers.
 
 ## 18. Reference Collections
 
