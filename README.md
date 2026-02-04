@@ -63,6 +63,10 @@ Recommended reading order:
 
 - [Enabling Deterministic Inference for SGLang](https://lmsys.org/blog/2025-09-22-sglang-deterministic/) - LMSYS Org. Details the integration of batch-invariant kernels into SGLang to enable reproducible inference results.
 
+- [The Next 1000x Cost Saving of LLM](https://ralphmao.github.io/token-cost/) - Ralph Mao. Analysis of how LLM per-token costs have dropped ~1000x and where the next wave of cost reductions will come from across the stack.
+
+- [Rethinking Thinking Tokens: LLMs as Improvement Operators](https://arxiv.org/abs/2510.01123) - arXiv. Explores whether models can leverage metacognition to provide better reasoning without inflating context length and token costs.
+
 #### Tier 3
 
 - [Hyperparameters are all you need: Using five-step inference for an optimal diffusion schedule](https://zenodo.org/records/17180452) - Zenodo. Analysis of truncation error in diffusion ODE/SDE solvers and optimal inference scheduling with minimal hyperparameter tuning.
@@ -80,6 +84,12 @@ Recommended reading order:
 - [The Rise of vLLM: Building an Open Source LLM Inference Engine](https://www.youtube.com/watch?v=WLl8D1nyaW8) - Anyscale. Video on vLLM's evolution from research project to the dominant open-source LLM inference engine.
 
 - [SGLang](https://www.sglang.io/) - SGLang. Official site for SGLang, a fast serving framework for large language and vision models with RadixAttention and structured generation.
+
+- [SGLang: An Efficient Open-Source Framework for Large-Scale LLM Serving](https://www.youtube.com/watch?v=w9-AYqIhHRo) - Anyscale. Video presentation on SGLang's architecture and performance optimizations for large-scale LLM serving.
+
+- [SGLang Cookbook](https://cookbook.sglang.io/docs/intro) - SGLang. Official cookbook with practical recipes and patterns for using SGLang in production.
+
+- [mini-sglang](https://github.com/sgl-project/mini-sglang) - SGLang Project. Minimal reimplementation of SGLang for educational purposes, useful for understanding the core engine design.
 
 #### Tier 2
 
@@ -108,6 +118,42 @@ Recommended reading order:
 - [SGLang: Enable Return Routed Experts (PR #12162)](https://github.com/sgl-project/sglang/pull/12162) - ocss884. Feature enabling SGLang to return routed experts during forward pass for RL training integration, based on MiMo's R3 protocol.
 
 - [optillm: Optimizing Inference Proxy for LLMs](https://github.com/algorithmicsuperintelligence/optillm) - Algorithmic Superintelligence. Inference optimization proxy that sits between clients and LLM endpoints for improved throughput and cost efficiency.
+
+- [SGLang Diffusion: Accelerating Video and Image Generation](https://lmsys.org/blog/2025-11-07-sglang-diffusion/) - LMSYS Org. Bringing SGLang's state-of-the-art serving performance to diffusion model inference for image and video generation.
+
+- [Turbocharging LinkedIn's Recommendation Systems with SGLang](https://www.linkedin.com/blog/engineering/ai/turbocharging-linkedins-recommendation-systems-with-sglang) - LinkedIn Engineering. How LinkedIn integrated SGLang to accelerate their recommendation systems at scale.
+
+- [Advancing Low-Bit Quantization for LLMs: AutoRound x LLM Compressor](https://blog.vllm.ai/2025/12/09/intel-autoround-llmc.html) - vLLM Blog. Achieving faster, more efficient LLM serving with Intel's AutoRound and LLM Compressor integration.
+
+- [Token-Level Truth: Real-Time Hallucination Detection (HaluGate)](https://blog.vllm.ai/2025/12/14/halugate.html) - vLLM Blog. Real-time extrinsic hallucination detection for production LLM systems at the token level.
+
+- [NVIDIA Nemotron 3 Nano on vLLM](https://blog.vllm.ai/2025/12/15/run-nvidia-nemotron-3-nano.html) - vLLM Blog. Running highly efficient and accurate AI agents with NVIDIA Nemotron 3 Nano on vLLM.
+
+- [AMD x vLLM Semantic Router](https://blog.vllm.ai/2025/12/16/vllm-sr-amd.html) - vLLM Blog. AMD's collaboration with vLLM to build system-level intelligence for LLM routing.
+
+- [vLLM Large Scale Serving: DeepSeek @ 2.2k tok/s/H200 with Wide-EP](https://blog.vllm.ai/2025/12/17/large-scale-serving.html) - vLLM Blog. Achieving 2,200 tokens/s per H200 GPU serving DeepSeek with Wide Expert Parallelism at rack scale.
+
+- [vLLM Semantic Router + NVIDIA Dynamo Integration Demo](https://www.youtube.com/watch?v=rRULSR9gTds) - Abdallah Samara. End-to-end demo of vLLM Semantic Router integrated with NVIDIA Dynamo for intelligent inference routing.
+
+- [Intelligent LLM Inferencing via vLLM Semantic Router + LLM-D](https://youtu.be/dCxow80vgSc) - AI Cloud Clarity. Video on combining vLLM Semantic Router with LLM-D for intelligent large-scale LLM inference.
+
+- [vLLM Router](https://github.com/vllm-project/router) - vLLM Project. High-performance, lightweight router for vLLM large-scale deployments.
+
+- [vLLM-Omni Diffusion Acceleration](https://docs.vllm.ai/projects/vllm-omni/en/latest/user_guide/diffusion_acceleration) - vLLM. Guide to accelerating diffusion model inference with vLLM-Omni.
+
+- [Awesome vLLM Plugins](https://github.com/BudEcosystem/Awesome-vLLM-plugins) - Bud Ecosystem. Curated list of plugins built on top of vLLM for extended functionality.
+
+- [PowerInfer: High-Speed LLM Serving for Local Deployment](https://github.com/SJTU-IPADS/PowerInfer) - SJTU IPADS. Fast LLM inference engine optimized for consumer-grade GPUs through neuron-aware sparse computation.
+
+- [Tokenflood: Load Testing for LLMs](https://github.com/twerkmeister/tokenflood) - twerkmeister. Load testing framework for simulating arbitrary loads on instruction-tuned LLMs.
+
+- [LMCache: Efficient KV Cache Layer for Enterprise-Scale Inference](https://arxiv.org/abs/2510.09665) - arXiv. Moving KV caches outside GPU devices for cross-query and cross-engine cache reuse at enterprise scale.
+
+- [Optimizing Inference with NVFP4 KV Cache](https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/) - Eduardo Alvarez, NVIDIA. Using FP4 quantization for KV cache to reduce memory footprint for long context and large batch inference.
+
+- [Tensor Parallel (NanoVLLM)](https://liyuan24.github.io/writings/2025_12_18_nanovllm_tensor_parallel_kernel_fusion.html) - Liyuan. Tensor parallel implementation with kernel fusion in NanoVLLM, distributing model weights and KV cache across GPUs.
+
+- [Prompt Caching](https://ngrok.com/blog/prompt-caching/) - ngrok. Practical guide to implementing prompt caching for reduced latency and cost in LLM applications.
 
 #### Tier 3
 
@@ -187,6 +233,12 @@ Recommended reading order:
 
 - [LLM Pruning Collection](https://github.com/zlab-princeton/llm-pruning-collection) - Princeton zLab. Collection of LLM pruning implementations, training code for GPUs & TPUs, and evaluation scripts.
 
+- [torchao Float8 Training](https://github.com/pytorch/ao/blob/main/torchao%2Ffloat8%2FREADME.md) - PyTorch. Guide to FP8 training and inference with torchao, covering float8 precision for accelerated transformer workloads.
+
+- [NVIDIA TransformerEngine](https://github.com/NVIDIA/TransformerEngine) - NVIDIA. Library for accelerating Transformer models using FP8 and FP4 precision on Hopper, Ada, and Blackwell GPUs.
+
+- [Gemlite: Custom Low-Bit Fused CUDA Kernels](https://dropbox.github.io/gemlite_blogpost/) - Dropbox. CUDA kernels for building custom low-bit fused GEMV operations with sparse bitpacking and dequantization.
+
 #### Tier 3
 
 - [AirLLM: 70B Inference with Single 4GB GPU](https://github.com/lyogavin/airllm) - lyogavin. Library enabling inference of 70B-parameter models on a single 4GB GPU through layer-wise loading and quantization techniques.
@@ -215,7 +267,11 @@ Recommended reading order:
 
 - [GPU Architecture Deep Dive: From HBM to Tensor Cores](https://www.youtube.com/watch?v=5UWphJWdAHY) - Parallel Routines. Visual explanation of GPU architecture from memory hierarchy (HBM, L2, shared memory) through tensor core operations.
 
+- [How to Think About GPUs](https://jax-ml.github.io/scaling-book/gpus/) - JAX Scaling Book. Deep-dive chapter on GPU architecture — how each chip works, how they're networked, and what it means for LLMs, with NVIDIA GPU focus.
+
 #### Tier 2
+
+- [fast.cu: Fastest Kernels Written from Scratch](https://github.com/pranjalssh/fast.cu) - Pranjal. Collection of performance-optimized CUDA kernels written from scratch, useful as reference implementations for kernel engineering.
 
 - [Outperforming cuBLAS on H100: a Worklog](https://cudaforfun.substack.com/p/outperforming-cublas-on-h100-a-worklog) - CUDA for Fun. Detailed worklog of writing a CUDA matmul kernel that exceeds cuBLAS performance on H100, covering Hopper-specific optimizations.
 
@@ -242,6 +298,10 @@ Recommended reading order:
 - [Numerics in World Models](https://0x00b1.github.io/blog/2025/12/25/numerics-in-world-models/) - Analysis of numerical precision considerations in world model implementations and their impact on model behavior.
 
 - [Learn by Doing: TorchInductor Reduction Kernels](https://karthick.ai/blog/2025/Learn-By-Doing-Torchinductor-Reduction/) - Karthick Panner. Hands-on walkthrough of TorchInductor's reduction kernel generation pipeline.
+
+- [Inside NVIDIA GPUs: Anatomy of High-Performance Matmul Kernels](https://www.aleksagordic.com/blog/matmul) - Aleksa Gordic. From GPU architecture and PTX/SASS to warp-tiling and deep asynchronous tensor core pipelines.
+
+- [Low Latency Communication Kernels with NVSHMEM](https://www.youtube.com/live/rZBF2PuycLQ) - GPU MODE. Lecture on using NVSHMEM for low-latency GPU-to-GPU communication in distributed workloads.
 
 #### Tier 3
 
@@ -281,6 +341,12 @@ Recommended reading order:
 
 - [DeepSeek R1 671B on AMD MI300X GPUs: Maximum Throughput](https://docs.moreh.io/benchmarking/deepseek_r1_671b_on_amd_mi300x_gpus_maximum_throughput/) - Moreh. Performance evaluation of DeepSeek R1 671B inference across 40 AMD MI300X GPUs (5 servers).
 
+- [Learning to Love Mesh-Oriented Sharding](https://blog.ezyang.com/2025/12/learning-to-love-mesh-oriented-sharding/) - Edward Z. Yang. Deep explanation of mesh-oriented sharding for distributed tensor computation, covering the mental model shift from manual to mesh-based parallelism.
+
+- [An Open Source AI Compute Stack: Kubernetes + Ray + PyTorch + vLLM](https://www.youtube.com/watch?v=4o2amJxMHUc) - CNCF. Video on building an open-source AI compute stack combining Kubernetes, Ray, PyTorch, and vLLM for production inference.
+
+- [SkyPilot + NVIDIA Dynamo](https://github.com/skypilot-org/skypilot/tree/master/examples/serve/nvidia-dynamo) - SkyPilot. Example integration of SkyPilot with NVIDIA Dynamo for managing and scaling AI inference workloads across clouds.
+
 #### Tier 3
 
 - [How To Scale Your Model](https://jax-ml.github.io/scaling-book/) - JAX Team. Comprehensive book covering TPU/GPU architecture, inter-device communication, and parallelism strategies for training and inference at scale.
@@ -305,6 +371,18 @@ Recommended reading order:
 
 - [Optimizing Large-Scale Pretraining at Character.ai (Squinch)](https://blog.character.ai/squinch/) - Character.AI. Techniques from Noam Shazeer's team for making large-scale transformer training faster and more efficient, now shared publicly.
 
+- [Selective Gradient Masking](https://alignment.anthropic.com/2025/selective-gradient-masking/) - Anthropic. Technique for selectively masking gradients during training for improved alignment and capability control.
+
+- [SAPO: Qwen Post-Training](https://qwen.ai/blog?id=sapo) - Qwen. Qwen's approach to post-training optimization for improved model quality and alignment.
+
+- [Determinism and Scalability in Post-Training RL Systems](https://www.youtube.com/watch?v=3tlVeXp5xe8) - Ethan Su, AER Labs. Video on achieving deterministic and scalable reinforcement learning for post-training.
+
+- [Code Walkthrough of AReaL](https://www.linkedin.com/pulse/code-walkthrough-areal-chenyang-zhao-barrc) - Chenyang Zhao. Detailed code walkthrough of AReaL, praised as having the most artistic code in the RL infrastructure community.
+
+- [GPT OSS (20B) 500K Context Fine-Tuning with Unsloth](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/gpt_oss_(20B)_500K_Context_Fine_tuning.ipynb) - Unsloth. Colab notebook for fine-tuning a 20B model with 500K context length using Unsloth's optimizations.
+
+- [NVIDIA NeMo Emerging Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers) - NVIDIA NeMo. Collection of emerging optimizer implementations for efficient large-scale model training.
+
 ## 9. Hardware Architecture & Co-Design
 
 #### Tier 1
@@ -322,6 +400,10 @@ Recommended reading order:
 - [Inside the NVIDIA Rubin Platform: Six New Chips, One AI Supercomputer](https://developer.nvidia.com/blog/inside-the-nvidia-rubin-platform-six-new-chips-one-ai-supercomputer/) - Kyle Aubrey, NVIDIA. Technical overview of NVIDIA's next-generation Rubin platform architecture for AI factories.
 
 - [A Close Look at SRAM for Inference in the Age of HBM Supremacy](https://www.viksnewsletter.com/p/a-close-look-at-sram-for-inference) - Vik's Newsletter. In-depth analysis of SRAM's specific performance benefits for inference and why HBM remains essential despite SRAM's advantages.
+
+- [TinyTPU](https://www.tinytpu.com/) - TinyTPU Project. An attempt to understand and build a TPU by complete novices, with accompanying [GPU MODE lecture](https://www.youtube.com/watch?v=kccs9xk09rw).
+
+- [NVIDIA Nemotron 3 Family](https://research.nvidia.com/labs/nemotron/Nemotron-3/) - NVIDIA Research. Technical details of the Nemotron 3 model family designed for efficient and accurate AI agent deployment.
 
 ## 10. State-Space Models & Alternative Architectures
 
@@ -387,6 +469,16 @@ Recommended reading order:
 
 - [Shipping at Inference-Speed](https://steipete.me/posts/2025/shipping-at-inference-speed) - Peter Steinberger. Perspective on how AI inference speed changes software development workflows and shipping velocity.
 
+- [Strands Agents SDK (Python)](https://github.com/strands-agents/sdk-python) - Strands. Model-driven approach to building AI agents in just a few lines of code.
+
+- [open-ptc-agent: Programmatic Tool Calling with MCP](https://github.com/Chen-zexi/open-ptc-agent) - Chen Zexi. Open-source implementation of code execution with MCP (Programmatic Tool Calling).
+
+- [Agents Towards Production](https://github.com/NirDiamant/agents-towards-production) - Nir Diamant. End-to-end, code-first tutorials covering every layer of production-grade GenAI agents with reusable blueprints.
+
+- [Donating MCP and Establishing the Agentic AI Foundation](https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation) - Anthropic. Announcement of MCP donation to the Agentic AI Foundation for open agentic AI infrastructure.
+
+- [OML: AI-native Cryptography for Open-Model Attribution](https://www.youtube.com/watch?v=ygUOUnU6adE) - AER Labs. Talk on the Open Model Layer framework for security and attribution of open-source AI models.
+
 ## 14. Production Inference at Scale
 
 #### Tier 2
@@ -402,6 +494,10 @@ Recommended reading order:
 - [The Hidden Metric Destroying Your AI Agent's Performance](https://www.tensormesh.ai/blog-posts/hidden-metric-ai-agent-performance) - TensorMesh. How enterprise-grade AI-native caching cuts inference costs and latency by up to 10x.
 
 - [Migrating from Slurm to dstack](https://github.com/dstackai/migrate-from-slurm/blob/main/guide.md) - dstack. Step-by-step guide for migrating AI workloads from Slurm to cloud-native dstack orchestration.
+
+- [dstack 0.20 GA](https://dstack.ai/blog/0_20/) - dstack. Fleet-first UX and other major changes in dstack's GA release for cloud-native AI workload orchestration.
+
+- [LMCache ROI Calculator: When KV Cache Storage Reduces Costs](https://www.tensormesh.ai/blog-posts/ai-inference-cost-calculator) - TensorMesh. Calculator and analysis for when KV cache storage-backed caching reduces overall AI inference costs.
 
 - [LMCache Storage ROI Calculator](https://www.tensormesh.ai/tools/lmcache-storage-tco-calculator) - TensorMesh. Calculator for evaluating the ROI of adding storage-backed caching capacity with LMCache.
 
@@ -462,6 +558,18 @@ Recommended reading order:
 - [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) - hiyouga. Unified fine-tuning framework supporting 100+ LLMs and VLMs with multiple training strategies.
 
 - [Think-AI: Local AI Search on Your Computer](https://github.com/mrunalpendem123/Think-AI-) - mrunalpendem. Local AI search tool for running inference and search on your own machine.
+
+- [Optimium: Next-Gen AI Inference Optimization Engine](https://optimium.enerzai.com/) - Enerzai. High-performance and flexible AI inference optimization engine.
+
+- [HuggingFace Optimum](https://github.com/huggingface/optimum) - HuggingFace. Library for accelerating inference and training of Transformers, Diffusers, TIMM, and Sentence Transformers with hardware optimization tools.
+
+- [HAMi: Heterogeneous AI Computing Virtualization Middleware](https://github.com/Project-HAMi/HAMi) - CNCF. GPU virtualization middleware enabling sharing and isolation of heterogeneous AI accelerators.
+
+- [Inside the MAX Framework (Modular Meetup)](https://www.youtube.com/watch?v=WK5dVQ8vhbU) - Modular. Video walkthrough of Modular's MAX framework for unified AI inference and deployment.
+
+- [miles](https://github.com/radixark/miles) - radixark. Inference tooling project from the AER Labs community.
+
+- [Chronos-1.5B](https://huggingface.co/squ11z1/Chronos-1.5B) - squ11z1. 1.5B parameter model on HuggingFace.
 
 ## 18. Reference Collections
 
