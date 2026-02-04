@@ -67,6 +67,8 @@ Recommended reading order:
 
 - [Rethinking Thinking Tokens: LLMs as Improvement Operators](https://arxiv.org/abs/2510.01123) - arXiv. Explores whether models can leverage metacognition to provide better reasoning without inflating context length and token costs.
 
+- [Thinking Through How Pretraining vs RL Learn](https://www.dwarkesh.com/p/bits-per-sample) - Dwarkesh Patel. Analysis of how pretraining and reinforcement learning differ in their learning dynamics, with implications for RLVR progress.
+
 #### Tier 3
 
 - [Hyperparameters are all you need: Using five-step inference for an optimal diffusion schedule](https://zenodo.org/records/17180452) - Zenodo. Analysis of truncation error in diffusion ODE/SDE solvers and optimal inference scheduling with minimal hyperparameter tuning.
@@ -155,6 +157,22 @@ Recommended reading order:
 
 - [Prompt Caching](https://ngrok.com/blog/prompt-caching/) - ngrok. Practical guide to implementing prompt caching for reduced latency and cost in LLM applications.
 
+- [vLLM-Omni: Omni-Modality Model Serving](https://github.com/vllm-project/vllm-omni) - vLLM Project. High-throughput and memory-efficient inference and serving engine for omni-modality models.
+
+- [Announcing vLLM-Omni: Easy, Fast, and Cheap Omni-Modality Model Serving](https://blog.vllm.ai/2025/11/30/vllm-omni.html) - vLLM Blog. Official announcement of vLLM-Omni, a major extension of the vLLM ecosystem for next-generation omni-modality models.
+
+- [FriendliAI Achieves 3x Faster Qwen3 235B Inference](https://friendli.ai/blog/Qwen3-235B-benchmark) - FriendliAI. Benchmark demonstrating up to 3x faster Qwen3-235B inference compared to standard vLLM through optimized MoE-aware infrastructure.
+
+- [Together AI Delivers Fastest Inference for Top Open-Source Models](https://www.together.ai/blog/fastest-inference-for-the-top-open-source-models) - Together AI. Achieving up to 2x faster inference for Qwen, DeepSeek, and Kimi through GPU optimization, speculative decoding, and FP4 quantization on NVIDIA Blackwell.
+
+- [vLLM Gaudi Documentation](http://vllm-gaudi.readthedocs.io/) - vLLM. Documentation for running vLLM on Intel Gaudi accelerators.
+
+- [vLLM v0.12.0 Release](https://github.com/vllm-project/vllm/releases/tag/v0.12.0) - vLLM Project. Major release featuring 474 commits from 213 contributors, including PyTorch 2.9.0 upgrade, CUDA 12.9, and V0 deprecation.
+
+- [DeepSeek-V3 Usage Tips on vLLM](https://docs.vllm.ai/projects/recipes/en/latest/DeepSeek/DeepSeek-V3_2.html#usage-tips) - vLLM. Practical usage tips for serving DeepSeek-V3 with vLLM.
+
+- [SuffixDecoding: Extreme Speculative Decoding for Emerging AI Applications](https://suffix-decoding.github.io/) - NeurIPS 2025 Spotlight. Achieves up to 5.3x speedup in LLM inference for agentic applications using efficient suffix trees for training-free, CPU-based speculative drafting.
+
 #### Tier 3
 
 - [llm-d Architecture](https://llm-d.ai/docs/architecture) - llm-d. Overview of the llm-d distributed inference architecture, covering component design and system topology for large-scale LLM serving.
@@ -167,6 +185,10 @@ Recommended reading order:
 
 - [Inferact](https://inferact.ai/) - Founded by vLLM creators and core maintainers. Company building on vLLM as the world's AI inference engine.
 
+- [SGLang: Add Suffix Decoding Speculative Algorithm (PR #13553)](https://github.com/sgl-project/sglang/pull/13553) - adityakamat2. Implementation of suffix decoding in SGLang for training-free speculative decoding with CPU-based drafting for structured output throughput improvement.
+
+- [GPU Model Runner V2 (vLLM PR #25266)](https://github.com/vllm-project/vllm/pull/25266/files) - WoosukKwon. Major vLLM refactor removing persistent batch, using NumPy arrays for CPU states, and simplifying pre-/post-processing for the GPU model runner.
+
 ## 3. Attention Mechanisms & Memory Optimization
 
 #### Tier 1
@@ -176,6 +198,8 @@ Recommended reading order:
 - [Rotary Embeddings: A Relative Revolution](https://blog.eleuther.ai/rotary-embeddings/) - EleutherAI. Explanation of Rotary Positional Embedding (RoPE), which unifies absolute and relative position encoding approaches used in most modern LLMs.
 
 - [Attention Normalizes the Wrong Norm](https://convergentthinking.sh/posts/attention-normalizes-the-wrong-norm/) - Convergent Thinking. Analysis of why softmax constrains the L1 norm to 1 when it should constrain the L2 norm, with implications for attention mechanism design.
+
+- [LLM Optimization Lecture 4: Grouped Query Attention, Paged Attention](https://youtu.be/Myhz-whrq5Q?si=R4QXM0RzDfaAmAk4) - Faradawn Yang. Video lecture covering Grouped Query Attention and Paged Attention mechanisms for efficient LLM inference.
 
 #### Tier 2
 
@@ -191,6 +215,8 @@ Recommended reading order:
 
 - [Autocomp Trainium Attention](https://charleshong3.github.io/blog/autocomp_trainium_attention.html) - Charles Hong. Attention kernel implementation on AWS Trainium, covering custom attention computation on non-NVIDIA hardware.
 
+- [REFORM: A New Approach for Reasoning AI to Handle Ultra-Long Inputs](https://www.youtube.com/watch?v=pfLHtbT6cO4) - AER Labs. Video on REFORM, a method enabling reasoning AI models to process extremely long input sequences efficiently.
+
 #### Tier 3
 
 - [End-to-End Test-Time Training (TTT-E2E)](https://x.com/i/status/2009187297137446959) - Stanford, NVIDIA, UC Berkeley, Astera Institute. Method for compressing long contexts into weights, eliminating KV cache dependency for continuously learning LLMs.
@@ -202,6 +228,8 @@ Recommended reading order:
 - [kvcached: Virtualized Elastic KV Cache for Dynamic GPU Sharing](https://github.com/ovg-project/kvcached) - OVG Project. Virtualized KV cache management enabling dynamic GPU sharing and elastic memory allocation across inference workloads.
 
 - [Optimizing Long-Context Prefill on Multiple Older-Generation GPU Nodes](https://moreh.io/blog/optimizing-long-context-prefill-on-multiple-older-generation-gpu-nodes-251226/) - Moreh. Techniques for efficient long-context prefill computation distributed across older GPU hardware.
+
+- [Cross-GPU KV Cache Marketplace](https://github.com/neelsomani/kv-marketplace) - Neel Somani. Cross-GPU KV cache marketplace enabling efficient KV cache sharing and trading across GPU devices.
 
 ## 4. Quantization & Model Compression
 
@@ -269,6 +297,10 @@ Recommended reading order:
 
 - [How to Think About GPUs](https://jax-ml.github.io/scaling-book/gpus/) - JAX Scaling Book. Deep-dive chapter on GPU architecture — how each chip works, how they're networked, and what it means for LLMs, with NVIDIA GPU focus.
 
+- [NVIDIA Parallel Thread Execution (PTX) ISA](https://docs.nvidia.com/cuda/parallel-thread-execution/) - NVIDIA. Official documentation for NVIDIA's Parallel Thread Execution ISA, the low-level virtual instruction set for CUDA GPU programming.
+
+- [CUDA Programming Guide](https://docs.nvidia.com/cuda/cuda-programming-guide/) - NVIDIA. Official CUDA programming guide covering the CUDA programming model, API reference, and best practices for GPU kernel development.
+
 #### Tier 2
 
 - [fast.cu: Fastest Kernels Written from Scratch](https://github.com/pranjalssh/fast.cu) - Pranjal. Collection of performance-optimized CUDA kernels written from scratch, useful as reference implementations for kernel engineering.
@@ -303,6 +335,18 @@ Recommended reading order:
 
 - [Low Latency Communication Kernels with NVSHMEM](https://www.youtube.com/live/rZBF2PuycLQ) - GPU MODE. Lecture on using NVSHMEM for low-latency GPU-to-GPU communication in distributed workloads.
 
+- [NVIDIA CUDA Tile](https://developer.nvidia.com/cuda/tile) - NVIDIA. A tile-based GPU programming model targeting portability for NVIDIA Tensor Cores, representing the largest CUDA advancement since 2006.
+
+- [Focus on Your Algorithm — NVIDIA CUDA Tile Handles the Hardware](https://developer.nvidia.com/blog/focus-on-your-algorithm-nvidia-cuda-tile-handles-the-hardware) - Jonathan Bentz, NVIDIA. Introduction to CUDA Tile in CUDA 13.1, a virtual instruction set for tile-based programming that abstracts hardware complexity.
+
+- [Blackwell NVFP4 Kernel Hackathon Journey](https://yue-zhang-2025.github.io/2025/12/02/blackwell-nvfp4-kernel-hackathon-journey.html) - Yue Zhang. Personal account of optimizing NVFP4 kernels for NVIDIA Blackwell GPUs during a kernel hackathon.
+
+- [Tracing Hanging and Complicated GPU Kernels Down to the Source Code](https://blog.vllm.ai/2025/12/03/improved-cuda-debugging.html) - vLLM Blog. Advanced CUDA debugging techniques for tracing hanging kernels back to source code, building on earlier CUDA core dump work.
+
+- [Automating Algorithm Discovery: A Case Study in Kernel Generation](https://adrs-ucb.notion.site/datadog) - UC Berkeley / Datadog. Case study on using automated approaches for GPU kernel algorithm discovery and generation.
+
+- [AMD GPU Debugging](https://thegeeko.me/blog/amd-gpu-debugging/) - thegeeko. Guide to debugging GPU programs on AMD hardware, covering ROCm debugging tools and techniques.
+
 #### Tier 3
 
 - [Rust GPU: The Future of GPU Programming](https://rust-gpu.github.io/) - Rust GPU Project. Toolchain for writing GPU shaders and compute kernels in Rust, offering memory safety guarantees for GPU code.
@@ -310,6 +354,10 @@ Recommended reading order:
 - [rust-cuda: Ecosystem for GPU Code in Rust](https://github.com/Rust-GPU/rust-cuda) - Rust GPU. Libraries and tools for writing and executing fast GPU code fully in Rust, providing an alternative to CUDA C++.
 
 - [Stanford CS149 Assignment 5: Kernels](https://github.com/stanford-cs149/asst5-kernels) - Stanford. Course assignment on GPU kernel programming, useful for structured hands-on learning.
+
+- [B200 Blockscaled GEMM: The Setup](https://veitner.bearblog.dev/b200-blockscaled-gemm-the-setup/) - Simon. Analysis of blockscaled GEMM kernel setup on NVIDIA B200, covering layout calculations, MMA operation setup, and kernel initialization.
+
+- [cuTile Python](https://github.com/PeaBrane/cutile-python) - PeaBrane. Python bindings for cuTile, a programming model for writing parallel kernels for NVIDIA GPUs.
 
 ## 6. Structured Output & Guided Decoding
 
@@ -326,6 +374,8 @@ Recommended reading order:
 #### Tier 1
 
 - [Meta AI Infrastructure Overview](https://iodized-hawthorn-94a.notion.site/Meta-AI-Infrastructure-Overview-1-27754c8e1f0a80359634c2e3c47d9e77) - Overview of Meta's AI infrastructure stack, covering GPU clusters, networking, and the systems powering large-scale model training and inference.
+
+- [From Single GPU to Clusters: A Practical Journey into Distributed Training](https://debnsuma.github.io/my-blog/posts/distributed-training-from-scratch/) - Debnsuma. Hands-on guide to distributed training, breaking down core concepts and techniques for scaling deep learning across multiple GPUs and machines using PyTorch and Ray.
 
 #### Tier 2
 
@@ -346,6 +396,12 @@ Recommended reading order:
 - [An Open Source AI Compute Stack: Kubernetes + Ray + PyTorch + vLLM](https://www.youtube.com/watch?v=4o2amJxMHUc) - CNCF. Video on building an open-source AI compute stack combining Kubernetes, Ray, PyTorch, and vLLM for production inference.
 
 - [SkyPilot + NVIDIA Dynamo](https://github.com/skypilot-org/skypilot/tree/master/examples/serve/nvidia-dynamo) - SkyPilot. Example integration of SkyPilot with NVIDIA Dynamo for managing and scaling AI inference workloads across clouds.
+
+- [Ray on TPUs with GKE: A More Native Experience](https://cloud.google.com/blog/products/containers-kubernetes/ray-on-tpus-with-gke-a-more-native-experience) - Google Cloud. New Ray on GKE features including label-based scheduling, atomic slice reservations, JaxTrainer, and built-in TPU awareness.
+
+- [Disaggregated Inference: 18 Months Later](https://hao-ai-lab.github.io/blogs/distserve-retro/) - Hao AI Lab. Retrospective on disaggregated inference 18 months after DistServe, showing how splitting prefill and decode across separate compute pools became standard in NVIDIA Dynamo, llm-d, SGLang, vLLM, and more.
+
+- [Power Up FSDP2 as a Flexible Training Backend for Miles](https://lmsys.org/blog/2025-12-03-miles-fsdp/) - LMSYS Org. Adding FSDP to Miles as a more flexible training backend for large-scale model training.
 
 #### Tier 3
 
@@ -382,6 +438,12 @@ Recommended reading order:
 - [GPT OSS (20B) 500K Context Fine-Tuning with Unsloth](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/gpt_oss_(20B)_500K_Context_Fine_tuning.ipynb) - Unsloth. Colab notebook for fine-tuning a 20B model with 500K context length using Unsloth's optimizations.
 
 - [NVIDIA NeMo Emerging Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers) - NVIDIA NeMo. Collection of emerging optimizer implementations for efficient large-scale model training.
+
+- [Efficient MoE Pre-Training at Scale with torchtitan](https://pytorch.org/blog/efficient-moe-pre-training-at-scale-with-torchtitan/) - PyTorch Blog. Guide to efficient Mixture-of-Experts pre-training using the torchtitan framework.
+
+- [GRPO Fine-Tuning for Ministral3-VL](https://colab.research.google.com/github/huggingface/trl/blob/main/examples/notebooks/grpo_ministral3_vl.ipynb) - HuggingFace TRL. Colab notebook demonstrating Group Relative Policy Optimization fine-tuning for Ministral3 vision-language model.
+
+- [SFT Fine-Tuning for Ministral3-VL](https://colab.research.google.com/github/huggingface/trl/blob/main/examples/notebooks/sft_ministral3_vl.ipynb) - HuggingFace TRL. Colab notebook for supervised fine-tuning of Ministral3 vision-language model.
 
 ## 9. Hardware Architecture & Co-Design
 
@@ -431,6 +493,14 @@ Recommended reading order:
 
 - [KerJEPA: Kernel Discrepancies for Euclidean Self-Supervised Learning](https://arxiv.org/abs/2512.19605) - arXiv. New family of self-supervised learning algorithms using kernel-based regularization for improved training stability and downstream generalization.
 
+- [Introducing Mistral 3](https://mistral.ai/news/mistral-3) - Mistral AI. Announcement of the Mistral 3 family of frontier open-source multimodal models.
+
+- [Qwen3-VL: Scanning Two-Hour Videos and Pinpointing Details](https://the-decoder.com/qwen3-vl-can-scan-two-hour-videos-and-pinpoint-nearly-every-detail/) - THE DECODER. Technical report analysis of Alibaba's Qwen3-VL, showing the open multimodal model excels at image-based math and can analyze hours of video footage.
+
+- [DeltaNet Explained (Part II)](https://sustcsonglin.github.io/blog/2024/deltanet-2/) - Songlin Yang. Algorithm for parallelizing DeltaNet computation across the sequence length dimension.
+
+- [Titans + MIRAS: Helping AI Have Long-Term Memory](https://research.google/blog/titans-miras-helping-ai-have-long-term-memory/) - Google Research. Research on Titans and MIRAS architectures for enabling long-term memory in AI models.
+
 ## 11. Compiler & DSL Approaches
 
 #### Tier 1
@@ -444,6 +514,8 @@ Recommended reading order:
 - [Helion Flex Attention Example](https://github.com/pytorch/helion/blob/main/examples/flex_attention.py) - PyTorch. Reference implementation of flexible attention variants using Helion DSL, demonstrating how to write custom attention kernels with minimal code.
 
 - [CUDA Tile IR](https://github.com/NVIDIA/cuda-tile) - NVIDIA. MLIR-based intermediate representation and compiler infrastructure for CUDA kernel optimization, focusing on tile-based computation patterns targeting NVIDIA tensor cores.
+
+- [cuTile Python Samples](https://github.com/PeaBrane/cutile-python/blob/17927b4ea6a5db95eea38f6b72f5696f4c2fae09/samples/PeriodicConv1D.py#L63) - PeaBrane. Sample implementations using the cuTile programming model for writing parallel GPU kernels.
 
 ## 12. Confidential & Secure Inference
 
@@ -513,6 +585,10 @@ Recommended reading order:
 
 ## 15. Benchmarking & Profiling
 
+#### Tier 1
+
+- [Evaluation Guidebook](https://huggingface.co/spaces/OpenEvals/evaluation-guidebook) - OpenEvals / HuggingFace. Comprehensive guide to evaluating AI models, covering evaluation methodologies, metrics, and best practices.
+
 #### Tier 2
 
 - [FlashInfer-Bench](https://bench.flashinfer.ai/) - FlashInfer. Standardized benchmarking platform for AI infrastructure and kernel performance evaluation.
@@ -543,6 +619,10 @@ Recommended reading order:
 
 - [vLLM Internals Deep Dive (Thread)](https://x.com/archiexzzz/status/2005182120977989839) - Archie Sengupta. Visual thread diving deep into vLLM's internal architecture and design decisions.
 
+- [Live from NeurIPS: Meet the Researchers — Nemotron Labs](https://www.youtube.com/live/tqA8Klv3MUQ?si=SkrvgM2HIRiL1iF4) - NVIDIA Developer. Live session from NeurIPS featuring NVIDIA Nemotron Labs researchers discussing their latest work.
+
+- [Is Parallel Programming Practical? (perfbook)](https://mirrors.edge.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.html) - Paul McKenney. Comprehensive book on parallel programming from the Linux kernel community, covering synchronization, memory ordering, and performance optimization.
+
 ## 17. Tools & Libraries
 
 #### Tier 1
@@ -571,9 +651,13 @@ Recommended reading order:
 
 - [Chronos-1.5B](https://huggingface.co/squ11z1/Chronos-1.5B) - squ11z1. 1.5B parameter model on HuggingFace.
 
+- [Transformers v5.0.0rc0](https://github.com/huggingface/transformers/releases/tag/v5.0.0rc0) - HuggingFace. Major release candidate for Transformers v5 with significant API changes including dynamic weight loading and tokenization updates.
+
 ## 18. Reference Collections
 
 - [GPU Performance Engineering Resources](https://github.com/wafer-ai/gpu-perf-engineering-resources) - Wafer AI. Comprehensive tiered learning guide for GPU kernel programming and optimization, covering fundamentals through production deployment.
+
+- [AER Labs Blog](https://aerlabs.tech/blogs) - AER Labs. Technical blog covering AI inference optimization, vLLM architecture, PagedAttention, KV cache systems, and LLM deployment strategies.
 
 ---
 
