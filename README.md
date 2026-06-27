@@ -803,6 +803,8 @@ Recommended reading order:
 
 - [HAMi: Heterogeneous AI Computing Virtualization Middleware](https://github.com/Project-HAMi/HAMi) - CNCF. GPU virtualization middleware enabling sharing and isolation of heterogeneous AI accelerators.
 
+- [Tuning Engines](https://github.com/cerebrixos-org/tuningengines) - Ockham Labs. OpenAI-compatible inference control plane for routing, policy enforcement, approvals, runtime traces, cost attribution, and trace-only observability around existing model deployments.
+
 - [Inside the MAX Framework (Modular Meetup)](https://www.youtube.com/watch?v=WK5dVQ8vhbU) - Modular. Video walkthrough of Modular's MAX framework for unified AI inference and deployment.
 
 - [miles](https://github.com/radixark/miles) - radixark. Inference tooling project from the AER Labs community.
