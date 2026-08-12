@@ -739,6 +739,8 @@ Recommended reading order:
 
 - [AI Hardware Benchmarking & Performance Analysis](https://artificialanalysis.ai/benchmarks/hardware) - Artificial Analysis. Comprehensive benchmarking of AI accelerator systems for LLM inference across chip configurations, inference software, and concurrent load scaling.
 
+- [InferenceBench](https://inferencebench.io) - InferenceBench. Interactive leaderboard and calculator comparing LLM inference cost, throughput, context window, and quality across models, GPUs, and cloud providers, with ROI and break-even analysis.
+
 #### Tier 2
 
 - [FlashInfer-Bench](https://bench.flashinfer.ai/) - FlashInfer. Standardized benchmarking platform for AI infrastructure and kernel performance evaluation.
