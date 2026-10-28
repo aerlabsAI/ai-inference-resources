@@ -779,6 +779,8 @@ Recommended reading order:
 
 - [Build an LLM from Scratch with MAX](https://llm.modular.com/) - Modular. Interactive tutorial for learning LLM internals by building from scratch using Modular's MAX Framework.
 
+- [Inference Engineering Academy](https://www.inference-engineering.xyz/) - Inference Engineering Academy team. Hands-on LLM inference course covering vLLM, SGLang, NVIDIA Dynamo, KV cache, batching and quantization, with 87 units across 6 courses, browser labs and coding problems; the Foundations course is free. Companion worked-number notes: [inference-engineering-notes](https://github.com/inference-engineering-academy/inference-engineering-notes).
+
 ## 17. Tools & Libraries
 
 #### Tier 1
